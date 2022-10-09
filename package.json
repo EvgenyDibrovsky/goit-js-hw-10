@@ -1,7 +1,7 @@
 {
   "name": "goit-js-hw-10",
   "version": "1.0.0",
-  "description": "Homework #9 - JS",
+  "description": "Homework #10 - JS",
   "homepage": "https://github.com/evgenydibrovsky/goit-js-hw-10",
   "scripts": {
     "start": "parcel src/*.html",
