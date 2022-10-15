@@ -37,11 +37,9 @@ input.addEventListener(
 function renderCountryList(countries) {
   const markup = countries
     .map(country => {
-      return `<li>
-      <img src="${country.flags.svg}" alt="Flag of ${
-        country.name.official
-      }" width="30" hight="20">
-         <b>${country.name.official}</p>
+      return `<li style="display: flex; align-items: center; gap: 10px;">
+      <img src="${country.flags.svg}" alt="Flag of ${country.name.official}" width="30">
+      <p style="font-size: 20px; margin: 0px">${country.name.official}</p>
                 </li>`;
     })
     .join('');
@@ -52,13 +50,12 @@ function renderOneCountry(countries) {
       const markup = countries
         .map(country => {
           return `<li>
-      <img src="${country.flags.svg}" alt="Flag of ${
-            country.name.official
-          }" width="30" hight="20">
-         <h2 style="display: inline">${country.name.official}</h2></p>
-            <p><b>Capital</b>: ${country.capital}</p>
-            <p><b>Population</b>: ${country.population}</p>
-            <p><b>Languages</b>: ${Object.values(country.languages)} </p>
+          
+          <img src="${country.flags.svg}" alt="Flag of ${country.name.official}" width="30">
+          <h2 style="display: inline">${country.name.official}</h2>
+          <p><b>Capital</b>: ${country.capital}</p>
+          <p><b>Population</b>: ${country.population}</p>
+          <p><b>Languages</b>: ${Object.values(country.languages)} </p>
                 </li>`;
         })
         .join('');
